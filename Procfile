@@ -1,0 +1,1 @@
+web: gunicorn encurtador_url.wsgi
