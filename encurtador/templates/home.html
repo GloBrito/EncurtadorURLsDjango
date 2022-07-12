@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encurteco! - Encurtador de links dos buserteco </title>
+</head>
+<body>
+    <div>
+        <h1>Encurteco</h1>
+        <form action="{% url 'valida_link' %}" method="POST"> {% csrf_token %}
+{#            <table>#}
+            <label>Digite aqui o link para o qual deseja redirecionar: </label>
+                {{ form.link_redirecionado }}
+            <label>Digite aqui como deseja que seu link apareça: </label>
+            <label>encurteco.herokuapp.com/</label>
+                {{ form.link_personalizado }}
+
+            <input type="submit">
+
+{#               {{ form.as_table }} #}
+{#            </table>#}
+        </form>
+    </div>
+</body>
+</html>
