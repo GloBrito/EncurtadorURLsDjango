@@ -25,3 +25,10 @@ def valida_link(request):
         except:
             return HttpResponse("erro interno do sistema")  
         # return HttpResponse(form.data['link_personalizado'])  
+
+def redirecionar(request, link):
+    links = Links.objects.filter(link_personalizado=link)
+    if len(links) == 0:
+        return redirect('/')
+  
+    return redirect(links[0].link_redirecionado)
