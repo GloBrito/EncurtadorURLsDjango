@@ -1,9 +1,8 @@
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import FormLinks
-from.models import Links
-from django.shortcuts import redirect 
-
+from .models import Links
+from django import forms
 
 def home(request):
     form = FormLinks()
@@ -20,6 +19,9 @@ def valida_link(request):
         return redirect ("/?status=1")
 
     if form.is_valid():
-       
-
-        return HttpResponse(form.data['link_personalizado'])  
+        try:
+            form.save()
+            return HttpResponse(f"Seu link foi personalizado com sucesso e é: https://encurteco.herokuapp.com/{form.data['link_personalizado']}")
+        except:
+            return HttpResponse("erro interno do sistema")  
+        # return HttpResponse(form.data['link_personalizado'])  
