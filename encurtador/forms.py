@@ -6,4 +6,4 @@ from .models import Links
 class FormLinks(forms.ModelForm):
     class Meta:
         model = Links
-        fields = "__all__"
+        fields = ['linkredirecionado', 'link_personalizado']
