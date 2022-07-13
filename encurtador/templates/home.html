@@ -11,19 +11,11 @@
     <div>
         <h1>Encurteco</h1>
         <form action="{% url 'valida_link' %}" method="POST"> {% csrf_token %}
-{#            <table>#}
-            <label>Digite aqui o link para o qual deseja redirecionar: </label>
-                {{ form.link_redirecionado }}
-            <label>Digite aqui como deseja que seu link apareça: </label>
-            <label>encurteco.herokuapp.com/</label>
-                {{ form.link_personalizado }}
+                {{ form }}
                 {%if status == "1"%}
                 <p>O link digitado já existe</p>
                 {% endif %}
             <input type="submit">
-
-{#               {{ form.as_table }} #}
-{#            </table>#}
         </form>
     </div>
 </body>
