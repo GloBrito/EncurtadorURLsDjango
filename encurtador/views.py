@@ -20,12 +20,13 @@ def valida_link(request):
     #links = Links.objects.filter(link_personalizado=link_personalizado)
 
     if not form.is_valid():
-        return HttpResponse("Erro interno do sistema")
-
+        # return HttpResponse("Erro interno do sistema")
+        return render(request, 'existente.html')
     try:
         form.save()
         # return render("meu-template-links-adicionado!")
-        return HttpResponse(f"Seu link foi criado com sucesso e é: {host}/{form.data['link_personalizado']}")
+        # return HttpResponse(f"Seu link foi criado com sucesso e é: {host}/{form.data['link_personalizado']}")
+        return render(request, 'sucesso.html')
 
     except Exception as error:
         raise Exception("algum erro no salvar!")
@@ -35,6 +36,7 @@ def redirecionar(request, link):
     links = Links.objects.filter(link_personalizado=link)
     if len(links) == 0:
         # return render("pagina404")
-        return redirect('/')
+        # return redirect('/')
+        return render(request, '404.html')
 
     return redirect(links[0].link_redirecionado)
