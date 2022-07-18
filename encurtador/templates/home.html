@@ -19,19 +19,23 @@
     <div class="background">
             <div class="container">
     <div>
-        <img class="img" src="{% static 'img/encurt########eco_mascote.jpg' %}"  alt="img">
+        <img src="{% static 'img/encurteco_mascote.jpg' %} "  alt="mascote encurteco" class="img">
     </div>
-
-    <div>
-        <h1 class="titulo">Encurteco</h1>
-        <form action="{% url 'valida_link' %}" method="POST"> {% csrf_token %}
-                {{ form }}
-                {%if status == "1"%}
-                <p>O link digitado já existe</p>
-                {% endif %}
-            <input type="submit">
-        </form>
-    </div>
+       <h1 class="titulo"> Encurteco </h1>
+       <form action="{% url 'valida_link' %}" method="POST" class="formulario" placeholder="https://"> {% csrf_token %}
+               <label class="texto_normal">Digite a URL que deve ser encurtada: </label>
+               {{form.link_redirecionado }}
+           <label class="texto_normal">Personalize o seu link: </label>
+           <div class="form_lado_lado">
+                <label class="texto_exemplo">https://encurteco.herokuapp.com/</label>
+                {{form.link_personalizado}}
+           </div>
+           {#               {% endif %}#}
+           {#               {% if status == '1' %}#}
+           {#               <p style="color: red;">O link digitado já existe</p>#}
+               <input type="submit" class="botao_principal texto_botao">
+       </form>
+   </div>
 </body>
 </html>
 
