@@ -156,7 +156,8 @@
 
 .botao_principal{
     flex-direction: row;
-    width: 120px;
+    /*width: 120px;*/
+    padding: 0px 10px;
     height: 30px;
     margin: 20px;
     border: none;
