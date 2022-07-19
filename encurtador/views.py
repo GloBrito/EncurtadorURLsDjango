@@ -27,8 +27,10 @@ def valida_link(request):
         # return render("meu-template-links-adicionado!")
         # return HttpResponse(f"Seu link foi criado com sucesso e é: {host}/{form.data['link_personalizado']}")
         new_link = f"{host}/{form.data['link_personalizado']}"
+        abrir_link = f"/{form.data['link_personalizado']}"
         contex = {
-            'new_link': new_link
+            'new_link': new_link,
+            'abrir_link': abrir_link,
         }
         return render(request, 'sucesso.html', contex)
 

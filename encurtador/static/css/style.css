@@ -130,8 +130,9 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 15px;
-    color: #656565;
+    /*color: #656565;*/
     text-align: center;
+    margin-top: 10px;
 }
 
 .form_lado_lado{
@@ -144,7 +145,6 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 15px;
     color: #5b5b5b;
     text-align: center;
 }
@@ -167,8 +167,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  
+}
 
+.botao_principal:hover{
+    background-color: #e853ac;
 }
 
 .texto_botao{
