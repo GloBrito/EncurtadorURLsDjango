@@ -12,10 +12,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
+    /*gap: 20px;*/
     background-color: #fff;
     width: 580px;
-    height: 550px;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -38,12 +38,14 @@
     justify-content: center;
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .titulo{
     /* position: absolute; */
     /* width: 208px; */
     /* height: 60px; */
+    margin: 10px 0px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -51,7 +53,7 @@
     line-height: 60px;
     color: #cd1f87;
     text-align: center;
-    margin: 0 0 5px 0;
+    margin: 10px 0px;
     font-size: 55px;
 }
 
@@ -132,12 +134,14 @@
     line-height: 15px;
     /*color: #656565;*/
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0px;
 }
 
 .form_lado_lado{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .texto_exemplo{
@@ -145,7 +149,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #5b5b5b;
+    /*color: #5b5b5b;*/
     text-align: center;
 }
 
@@ -159,7 +163,7 @@
     /*width: 120px;*/
     padding: 0px 10px;
     height: 30px;
-    margin: 20px;
+    margin: 10px 0px 20px;
     border: none;
     background: #cd1f87;
     /*box-shadow: 2px 5px 8px 0px rgb(0 0 0 / 18%);*/
@@ -215,3 +219,21 @@
     border: 1px solid #cd1f87;
     border-radius: 0px 5px 5px 0px;
 }
+
+.divisao-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 10px 20px 10px;
+    width: 450px;
+    height: auto;
+    border: 1px solid #d5d5d5;
+    background-color: #f6f9f9;
+    border-radius: 5px;
+}
+
+/*#id_link_personalizado::placeholder {*/
+/*    content: "gniwoen";*/
+/*}*/
