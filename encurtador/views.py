@@ -20,13 +20,17 @@ def valida_link(request):
     #links = Links.objects.filter(link_personalizado=link_personalizado)
 
     if not form.is_valid():
-        # return HttpResponse("Erro interno do sistema")
+        # return HttpResponse("Formulário invalido")
         return render(request, 'existente.html')
     try:
         form.save()
         # return render("meu-template-links-adicionado!")
         # return HttpResponse(f"Seu link foi criado com sucesso e é: {host}/{form.data['link_personalizado']}")
-        return render(request, 'sucesso.html')
+        new_link = f"{host}/{form.data['link_personalizado']}"
+        contex = {
+            'new_link': new_link
+        }
+        return render(request, 'sucesso.html', contex)
 
     except Exception as error:
         raise Exception("algum erro no salvar!")
