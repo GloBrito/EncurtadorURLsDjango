@@ -23,7 +23,9 @@
         <img src="{% static 'img/encurteco-existente-min.jpg' %} "  alt="mascote encurteco" class="img">
     </div>
        <h1 class="titulo">Link já existe</h1>
-
+        <div class="texto_normal">
+            <a href="{{new_link}}" target="_blank" class="texto_normal">{{abrir_link}}</a>
+        </div>
        <a href="{% url 'home' %} " class="botao_principal texto_botao">Criar outro link</a>
    </div>
 </body>

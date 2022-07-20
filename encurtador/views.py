@@ -19,7 +19,13 @@ def valida_link(request):
     link_personalizado = form.data['link_personalizado']
 
     if not form.is_valid():
-        return render(request, 'existente.html')
+        new_link = f"{form.data['link_redirecionado']}"
+        abrir_link = f"encurteco.herokuapp.com/{form.data['link_personalizado']}"
+        contex = {
+            'new_link': new_link,
+            'abrir_link': abrir_link,
+        }
+        return render(request, 'existente.html', contex)
     try:
         form.save()
         new_link = f"{host}/{form.data['link_personalizado']}"
