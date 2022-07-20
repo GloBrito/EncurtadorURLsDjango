@@ -240,3 +240,20 @@
 /*#id_link_personalizado::placeholder {*/
 /*    content: "gniwoen";*/
 /*}*/
+/* media query */
+@media (max-width: 414px) {
+    .container {
+        width: 80%;
+    }
+
+    .divisao-form {
+        width: 95%;
+    }
+
+    .form_lado_lado {
+        flex-direction: column;
+        gap: 5px;
+
+    }
+
+    }
