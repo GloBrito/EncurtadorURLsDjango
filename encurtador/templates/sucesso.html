@@ -17,20 +17,9 @@
             <a href="{{abrir_link}}" id="texto" target="_blank" class="texto_normal">{{new_link}}</a>
             <button   onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
             <script>
-                // function copiarTexto() { 
-                //     debugger
-                //     let textoCopiado = document.getElementById("texto");
-                //     textoCopiado.select();
-                //     debugger
-                //     textoCopiado.setSelectionRange(0, 99999);
-                //     document.execCommand("copy");
-                //     navigator.clipboard.writeText(textoCopiado);
-                //     alert("O texto é: " + textoCopiado.value);
-        
-                // }
                 function copiarTexto() {
                     const copyText = document.getElementById("texto");
-                    navigator.clipboard.writeText(copyText);                    
+                    navigator.clipboard.writeText(copyText);
                     alert(copyText);
                 }
             </script>
