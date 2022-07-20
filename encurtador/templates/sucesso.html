@@ -14,7 +14,26 @@
 <h1 class="titulo">Sucesso!</h1>
 <p class="texto_normal">Seu link é:</p>
         <div class="texto_normal">
-            <a href="{{abrir_link}}" target="_blank" class="texto_normal">{{new_link}}</a>
+            <a href="{{abrir_link}}" id="texto" target="_blank" class="texto_normal">{{new_link}}</a>
+            <button   onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
+            <script>
+                // function copiarTexto() { 
+                //     debugger
+                //     let textoCopiado = document.getElementById("texto");
+                //     textoCopiado.select();
+                //     debugger
+                //     textoCopiado.setSelectionRange(0, 99999);
+                //     document.execCommand("copy");
+                //     navigator.clipboard.writeText(textoCopiado);
+                //     alert("O texto é: " + textoCopiado.value);
+        
+                // }
+                function copiarTexto() {
+                    const copyText = document.getElementById("texto");
+                    navigator.clipboard.writeText(copyText);                    
+                    alert(copyText);
+                }
+            </script>
         </div>
         <a href="{% url 'home' %} " class="botao_principal texto_botao">Criar outro link</a>
 </div>
