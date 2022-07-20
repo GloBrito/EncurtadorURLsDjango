@@ -22,7 +22,7 @@
         <img src="{% static 'img/encurteco_mascote.jpg' %} "  alt="mascote encurteco" class="img">
     </div>
        <h1 class="titulo"> Encurteco </h1>
-       <form action="{% url 'valida_link' %}" method="POST" class="formulario" placeholder="https://"> {% csrf_token %}
+       <form action="{% url 'valida_link' %}" method="POST" class="formulario"> {% csrf_token %}
            <div class="divisao-form">
                <label class="texto_normal">Digite a URL que deve ser encurtada: </label>
                {{form.link_redirecionado }}
@@ -35,9 +35,7 @@
                    {{form.link_personalizado}}
                </div>
            </div>
-           {#               {% endif %}#}
-           {#               {% if status == '1' %}#}
-           {#               <p style="color: red;">O link digitado já existe</p>#}
+
                <input type="submit" class="botao_principal texto_botao">
        </form>
    </div>
