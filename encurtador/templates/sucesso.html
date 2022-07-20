@@ -6,17 +6,17 @@
 {% endblock titulo %}
 
 {% block conteudo %}
-    <div class="background">
-            <div class="container">
-    <div>
-        <img src="{% static 'img/encurteco_ok.png' %} "  alt="mascote encurteco" class="img">
-    </div>
-    <div>
-        <h1 class="titulo">Sucesso!</h1>
-        <p class="texto_normal">Seu link é:</p>
+<div class="background">
+    <div class="container">
+        <div>
+            <img src="{% static 'img/encurteco_ok.png' %} "  alt="mascote encurteco" class="img">
+        </div>
+<h1 class="titulo">Sucesso!</h1>
+<p class="texto_normal">Seu link é:</p>
         <div class="texto_normal">
             <a href="{{abrir_link}}" target="_blank" class="texto_normal">{{new_link}}</a>
         </div>
         <a href="{% url 'home' %} " class="botao_principal texto_botao">Criar outro link</a>
-    </div>
+</div>
+</div>
 {% endblock conteudo %}
