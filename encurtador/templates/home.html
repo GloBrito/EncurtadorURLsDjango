@@ -14,12 +14,12 @@
        <h1 class="titulo"> Encurteco </h1>
        <form action="{% url 'valida_link' %}" method="POST" class="formulario"> {% csrf_token %}
            <div class="divisao-form">
-               <label class="texto_normal">Insira a URL que deve ser encurtada: </label>
+               <label class="texto_normal bold">Insira a URL que deve ser encurtada: </label>
                {{form.link_redirecionado }}
            </div>
 
            <div class="divisao-form">
-               <label class="texto_normal">Personalize o seu link: </label>
+               <label class="texto_normal bold">Personalize o seu link: </label>
                <div class="form_lado_lado">
                    <label class="texto_exemplo">https://encurteco.herokuapp.com/</label>
                    {{form.link_personalizado}}

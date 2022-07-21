@@ -129,16 +129,31 @@
     border-radius: 5px;                   
 }
 
+.caixa_link{
+    box-sizing: border-box;
+    /* position: absolute; */
+    width: 100%;
+    padding: 5px;
+    height: 29px;
+    background: #FFFFFF;
+    border: 1px solid #DCD6D6;
+    border-radius: 5px 0px 0px 5px;
+}
+
 .texto_normal{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
     font-size: 16px;
     line-height: 15px;
+    font-weight: 400;
     /*color: #656565;*/
     text-align: center;
     margin: 10px 0px;
 }
+.bold {
+    font-weight: 700;
+}
+
 
 .form_lado_lado{
     display: flex;
@@ -163,7 +178,7 @@
 
 .botao_principal{
     flex-direction: row;
-    /*width: 120px;*/
+    width: auto;
     padding: 0px 10px;
     height: 30px;
     margin: 10px 0px 20px;
@@ -253,7 +268,10 @@
     .form_lado_lado {
         flex-direction: column;
         gap: 5px;
+    }
 
+    .botao_acao:hover{
+        background-color: #e853ac;
     }
 
     }
