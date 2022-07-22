@@ -9,7 +9,7 @@ from django.shortcuts import redirect
 def home(request):
     form = FormLinks()
     status = request.GET.get('status')
-    return render(request, 'home.html', {"form": form, "status": status})
+    return render(request, 'encurtador/home.html', {"form": form, "status": status})
 
 
 def valida_link(request):
@@ -25,7 +25,7 @@ def valida_link(request):
             'new_link': new_link,
             'abrir_link': abrir_link,
         }
-        return render(request, 'existente.html', contex)
+        return render(request, 'encurtador/existente.html', contex)
     try:
         form.save()
         new_link = f"{host}/{form.data['link_personalizado']}"
@@ -34,7 +34,7 @@ def valida_link(request):
             'new_link': new_link,
             'abrir_link': abrir_link,
         }
-        return render(request, 'sucesso.html', contex)
+        return render(request, 'encurtador/sucesso.html', contex)
 
     except Exception as error:
         raise Exception("algum erro no salvar!")
@@ -43,6 +43,6 @@ def valida_link(request):
 def redirecionar(request, link):
     links = Links.objects.filter(link_personalizado=link)
     if len(links) == 0:
-        return render(request, '404.html')
+        return render(request, 'encurtador/404.html')
 
     return redirect(links[0].link_redirecionado)
