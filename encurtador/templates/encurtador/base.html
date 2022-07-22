@@ -10,16 +10,18 @@
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{% static 'img/encurteco_mascote.ico' %}" type="image/x-icon"/>
-{% block titulo %}
-    <title>Encurteco</title>
-{% endblock titulo %}
+    {% block titulo %}
+        <title>Encurteco</title>
+    {% endblock titulo %}
     <script
-      src="https://kit.fontawesome.com/9bcdacf017.js"
-      crossorigin="anonymous"
-    ></script></head>
+            src="https://kit.fontawesome.com/9bcdacf017.js"
+            crossorigin="anonymous"
+    ></script>
+</head>
 <body>
 
 {% block conteudo %}
