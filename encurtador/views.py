@@ -19,10 +19,10 @@ def valida_link(request):
     link_personalizado = form.data['link_personalizado']
 
     if not form.is_valid():
-        new_link = f"{form.data['link_redirecionado']}"
+        new_link = Links.objects.filter(link_personalizado=form.data['link_personalizado'])
         abrir_link = f"encurteco.herokuapp.com/{form.data['link_personalizado']}"
         contex = {
-            'new_link': new_link,
+            'new_link': new_link[0].link_redirecionado,
             'abrir_link': abrir_link,
         }
         return render(request, 'encurtador/existente.html', contex)
