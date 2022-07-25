@@ -12,17 +12,17 @@ def home(request):
     return render(request, 'encurtador/home.html', {"form": form, "status": status})
 
 
-def valida_link(request):
+def valida_e_salva_link(request):
     form = FormLinks(request.POST)
     host = request.META.get('HTTP_HOST')
 
     link_personalizado = form.data['link_personalizado']
 
     if not form.is_valid():
-        new_link = Links.objects.filter(link_personalizado=form.data['link_personalizado'])
+        link_existente = Links.objects.filter(link_personalizado=form.data['link_personalizado'])
         abrir_link = f"encurteco.herokuapp.com/{form.data['link_personalizado']}"
         contex = {
-            'new_link': new_link[0].link_redirecionado,
+            'link_existente': link_existente[0].link_redirecionado,
             'abrir_link': abrir_link,
         }
         return render(request, 'encurtador/existente.html', contex)
