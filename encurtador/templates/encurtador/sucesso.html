@@ -9,7 +9,7 @@
 <div class="background">
     <div class="container">
         <div>
-            <img src="{% static 'img/encurteco_ok.png' %} " alt="mascote encurteco" class="img">
+            <img src="{% static 'img/encurteco_ok.jpg' %} " alt="mascote encurteco" class="img">
         </div>
 <h1 class="titulo">Sucesso!</h1>
         <div class="divisao-form">
@@ -23,7 +23,7 @@
                 function copiarTexto() {
                     const copyText = document.getElementById("texto");
                     const buttoao = document.querySelector(".botao_acao")
-                    navigator.clipboard.writeText(copyText);
+                    navigator.clipboard.writeText(copyText.innerText);
                     buttoao.className = 'fa-solid fa-check texto_botao botao_acao'
 
                 }
