@@ -233,16 +233,24 @@
 /* PÁGINA DE SUCESSO */
 
 .botao_acao{
-    box-sizing: border-box;
-
-    /* position: absolute; */
+    /*box-sizing: border-box;*/
     width: 31px;
-    height: 29px;
-
+    height: 31px;
     background: #CD1F87;
     border: 1px solid #cd1f87;
     border-radius: 0px 5px 5px 0px;
 }
+
+.botao_acao:hover{
+    background-color: #ea5cb1;
+}
+
+.botao_acao_ok{
+    width: 31px;
+    height: 31px;
+    background: #59c2d5;
+    border: 1px solid #59c2d5;
+    border-radius: 0px 5px 5px 0px;}
 
 .divisao-form {
     display: flex;
@@ -273,8 +281,6 @@
         gap: 5px;
     }
 
-    .botao_acao:hover{
-        background-color: #e853ac;
-    }
+
 
     }
