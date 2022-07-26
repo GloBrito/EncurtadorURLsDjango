@@ -1,5 +1,4 @@
 from django import forms
-from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import FormLinks
 from .models import Links
