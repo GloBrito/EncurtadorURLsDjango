@@ -7,5 +7,3 @@ class FormLinks(forms.ModelForm):
     class Meta:
         model = Links
         fields = "__all__"
-
-

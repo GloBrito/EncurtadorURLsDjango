@@ -1,6 +1,5 @@
-from django import forms
 from django.shortcuts import render
-from .forms import FormLinks
+from encurtador.forms import FormLinks
 from .models import Links
 from django.shortcuts import redirect
 
@@ -14,8 +13,6 @@ def home(request):
 def valida_e_salva_link(request):
     form = FormLinks(request.POST)
     host = request.META.get('HTTP_HOST')
-
-    link_personalizado = form.data['link_personalizado']
 
     if not form.is_valid():
         link_existente = Links.objects.filter(link_personalizado=form.data['link_personalizado'])
@@ -35,7 +32,7 @@ def valida_e_salva_link(request):
         }
         return render(request, 'encurtador/sucesso.html', contex)
 
-    except Exception as error:
+    except Exception:
         raise Exception("algum erro no salvar!")
 
 
