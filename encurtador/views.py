@@ -6,8 +6,7 @@ from django.shortcuts import redirect
 
 def home(request):
     form = FormLinks()
-    status = request.GET.get('status')
-    return render(request, 'encurtador/home.html', {"form": form, "status": status})
+    return render(request, 'encurtador/home.html', {"form": form})
 
 
 def valida_e_salva_link(request):
