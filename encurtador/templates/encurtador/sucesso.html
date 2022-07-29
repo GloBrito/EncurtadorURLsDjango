@@ -15,19 +15,17 @@
             <div class="alinhar">
                 <div class="divisao-form">
                     <p class="texto_normal bold">Seu link é:</p>
-                    <div class="texto_normal bold">
-                        <a href="{{ abrir_link }}" id="texto" target="_blank"
-                           class="texto_normal caixa_link">{{ new_link }}</a>
-                        <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
-                        <script>
-                            function copiarTexto() {
-                                const copyText = document.getElementById("texto");
-                                const buttoao = document.querySelector(".botao_acao")
-                                navigator.clipboard.writeText(copyText.innerText);
-                                buttoao.className = 'fa-solid fa-check texto_botao botao_acao_ok'
-                            }
-                        </script>
-                    </div>
+                    <a href="{{ abrir_link }}" id="texto" target="_blank"
+                       class="texto_normal caixa_link">{{ new_link }}</a>
+                    <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
+                    <script>
+                        function copiarTexto() {
+                            const copyText = document.getElementById("texto");
+                            const buttoao = document.querySelector(".botao_acao")
+                            navigator.clipboard.writeText(copyText.innerText);
+                            buttoao.className = 'fa-solid fa-check texto_botao botao_acao_ok'
+                        }
+                    </script>
                 </div>
                 <a href="{% url 'home' %} " class="botao_principal texto_botao">Criar outro link</a>
             </div>

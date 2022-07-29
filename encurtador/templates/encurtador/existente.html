@@ -12,25 +12,23 @@
             <div>
                 <img src="{% static 'img/encurteco_existente_min.jpg' %} " alt="mascote encurteco" class="img">
             </div>
-            <div>
-                <h1 class="titulo">Link já existe</h1>
-
-                <div class="divisao-form">
-                    <div class="texto_normal bold">
-                        <a href="{{ link_existente }}" target="_blank"
-                           class="texto_normal caixa_link" >{{ abrir_link }}</a>
-                       <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
-                </div>
+            <h1 class="titulo">Link já existe</h1>
+            <div class="alinhar">
+                <div class="divisao-form-copiar">
+                    <a href="{{ link_existente }}" target="_blank"
+                       class="texto_normal caixa_link">{{ abrir_link }}</a>
+                    <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao">
+                        <span class="texto_copiar">Copiar</span></button>
                 </div>
 
                 <a href="{% url 'home' %} " class="botao_principal texto_botao">Criar outro link</a>
             </div>
-
         </div>
     </div>
-    <script> 
 
-            
+    <script>
+
+
         function copiarTexto() {
             const copyText = document.querySelector(".caixa_link");
             const buttoao = document.querySelector(".botao_acao");
