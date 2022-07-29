@@ -1,0 +1,13 @@
+# DB
+psycopg2-binary
+psycopg2
+
+# HEROKU
+django-on-heroku
+gunicorn
+whitenoise
+dj-database-url
+
+# DJANGO
+Django
+python-decouple
