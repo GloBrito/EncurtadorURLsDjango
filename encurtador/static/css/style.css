@@ -1,5 +1,4 @@
 /* # PÁGINA INICIAL DO ENCURTECO  */
-
 .background {
     height: 100%;
     display: flex;
@@ -20,7 +19,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    padding: 8px 16px;
+    padding: 30px 8px;
     box-shadow: -2px 0 18px 4px #eef3f3;
 }
 
@@ -38,98 +37,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 .img {
     width: 200px;
     border-radius: 100%;
-    /* margin-block-end: 40em; */
     justify-content: center;
     display: flex;
     align-items: center;
-    margin-top: 20px;
 }
 
 .titulo {
-    /* position: absolute; */
-    /* width: 208px; */
-    /* height: 60px; */
-    margin: 10px 0px;
-    font-family: 'Poppins';
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
     line-height: 60px;
     color: #cd1f87;
     text-align: center;
-    margin: 10px 0px;
     font-size: 55px;
-}
-
-.link_original {
-    padding: 20px;
-    /* margin: 0 0 200px 0; */
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 18px;
-}
-
-.box_original {
-    width: 350px;
-    height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    padding: 8px 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #909090;
-    box-shadow: 0 2px 4px 0 #909090
-}
-
-.link_personalizado {
-    padding: 20px;
-    margin: 0 0 300px 0;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 18px;
-}
-
-.link_anterior {
-    padding: 10px;
-    margin: 0 0 50px 0;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    display: inline-block;
-}
-
-.box_link {
-    width: 90px;
-    height: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    padding: 8px 16px;
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    /* flex-direction: column; */
-    border: 1px solid #909090;
-    margin: 0 0 10px 0;
-    box-shadow: 0px 2px 4px 0 #909090;
-    display: inline-block;
-}
-
-.caixa_form {
-    box-sizing: border-box;
-    /* position: absolute; */
-    width: 251px;
-    height: 29px;
-    background: #FFFFFF;
-    border: 1px solid #DCD6D6;
-    border-radius: 5px;
 }
 
 .caixa_link {
@@ -142,21 +69,6 @@
     border-radius: 5px 0 0 5px;
 }
 
-.texto_normal {
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 15px;
-    font-weight: 400;
-    text-align: center;
-}
-
-.bold {
-    font-weight: 700;
-    margin: 10px 0;
-}
-
-
 .form_lado_lado {
     display: flex;
     flex-direction: row;
@@ -164,18 +76,27 @@
     justify-content: center;
 }
 
+.texto_normal {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+.bold {
+    font-weight: 700;
+    margin: 10px 0;
+}
+
 .texto_exemplo {
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    /*color: #5b5b5b;*/
     text-align: center;
-}
-
-.texto_vermelho {
-    color: red;
-    font-size: 17px;
 }
 
 .botao_principal {
@@ -183,7 +104,6 @@
     box-sizing: border-box;
     width: 100%;
     height: 30px;
-    margin: 10px 0px 20px;
     border: none;
     background: #cd1f87;
     border-radius: 5px;
@@ -200,21 +120,18 @@
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 15px;
-    font-size: 15px;
+    line-height: 16px;
+    font-size: 16px;
     text-align: center;
     color: #FFFFFF;
     text-decoration: none;
 }
 
 /* PÁGINA DO ERRO 4004 */
-
 .texto_status {
     /* position: absolute; */
     width: 182px;
     height: 23px;
-
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -224,14 +141,13 @@
 }
 
 /* PÁGINA DE SUCESSO */
-
 .botao_acao {
     /*box-sizing: border-box;*/
     width: 31px;
     height: 31px;
     background: #CD1F87;
     border: 1px solid #cd1f87;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0 5px 5px 0;
 }
 
 .botao_acao:hover {
@@ -301,6 +217,10 @@
 }
 
 @media (max-width: 415px) {
+    * {
+        text-align: center;
+    }
+
     .botao_acao, .botao_acao_ok {
         width: 100%;
         height: 29px;
@@ -337,7 +257,7 @@
     }
 
     .alinhar {
-        width: 100%;
+        width: 90%;
     }
 
     .texto_normal, .texto_exemplo {
