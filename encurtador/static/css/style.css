@@ -1,7 +1,4 @@
 /* # PÁGINA INICIAL DO ENCURTECO  */
-/*body {*/
-/*    position: absolute;*/
-/*}*/
 
 .background {
     height: 100%;
@@ -102,7 +99,7 @@
 .link_anterior {
     padding: 10px;
     margin: 0 0 50px 0;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     font-style: normal;
     font-size: 18px;
     display: inline-block;
@@ -151,12 +148,12 @@
     font-size: 16px;
     line-height: 15px;
     font-weight: 400;
-    /*color: #656565;*/
     text-align: center;
 }
 
 .bold {
     font-weight: 700;
+    margin: 10px 0;
 }
 
 
@@ -285,11 +282,33 @@
     border-radius: 5px;
 }
 
+.divisao-form-sucesso {
+    box-sizing: border-box;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #d5d5d5;
+    background-color: #f6f9f9;
+    border-radius: 5px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 415px) {
     .botao_acao, .botao_acao_ok {
         width: 100%;
-        height: 31px;
+        height: 29px;
         border-radius: 5px;
+    }
+
+    .formulario {
+        width: 95%;
     }
 
     .caixa_link {
@@ -298,7 +317,12 @@
     }
 
     .divisao-form {
-        gap: 5px;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .divisao-form-copiar {
+        gap: 10px;
         flex-direction: column;
     }
 
@@ -320,14 +344,19 @@
         font-size: 14px;
     }
 
-    .divisao-form {
-        flex-direction: column;
-        gap: 10px;
-    }
 
     .form_lado_lado {
         flex-direction: column;
         gap: 5px;
     }
 
+    .bold {
+        margin: 0;
+    }
+
+    .divisao-form-sucesso {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 }

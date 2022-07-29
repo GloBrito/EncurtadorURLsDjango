@@ -13,11 +13,13 @@
             </div>
             <h1 class="titulo">Sucesso!</h1>
             <div class="alinhar">
-                <div class="divisao-form">
+                <div class="divisao-form-sucesso">
                     <p class="texto_normal bold">Seu link é:</p>
                     <a href="{{ abrir_link }}" id="texto" target="_blank"
                        class="texto_normal caixa_link">{{ new_link }}</a>
-                    <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao"></button>
+                    <button onclick="copiarTexto()" class="fa-solid fa-copy texto_botao botao_acao">
+                        <span class="texto_copiar">Copiar</span>
+                    </button>
                     <script>
                         function copiarTexto() {
                             const copyText = document.getElementById("texto");
