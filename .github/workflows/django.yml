@@ -19,3 +19,6 @@ jobs:
     - name: Lint com Flake8
       run: |
         flake8
+    - name: Test com Pytest
+      run: |
+        pytest
