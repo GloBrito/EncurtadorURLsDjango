@@ -7,6 +7,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:13.3
+        env:
+          POSTGRES_DB: encurtador
+          POSTGRES_USER: encurtador
+          POSTGRES_PASSWORD: encurtador
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+        ports: [ '5432:5432' ]
+
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.9
@@ -19,9 +31,6 @@ jobs:
     - name: Lint com Flake8
       run: |
         flake8
-    - name: Sobe o docker com postgres
-      run: |
-        docker-compose up -d
     - name: Test com Pytest
       run: |
         pytest encurtador
