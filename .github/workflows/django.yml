@@ -21,4 +21,4 @@ jobs:
         flake8
     - name: Test com Pytest
       run: |
-        pytest
+        pytest encurtador
