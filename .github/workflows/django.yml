@@ -19,6 +19,9 @@ jobs:
     - name: Lint com Flake8
       run: |
         flake8
+    - name: Sobe o docker com postgres
+      run: |
+        docker-compose up -d
     - name: Test com Pytest
       run: |
         pytest encurtador
