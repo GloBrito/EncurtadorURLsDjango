@@ -3,3 +3,4 @@
 flake8
 pip-tools
 pytest-django
+pytest-cov
