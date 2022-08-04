@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     services:
       postgres:
         image: postgres:13.3
@@ -31,6 +30,9 @@ jobs:
     - name: Lint com Flake8
       run: |
         flake8
+    - name: Copiando arquivo de configuração
+      run: |
+        cp env-sample .env
     - name: Test com Pytest
       run: |
         pytest encurtador

@@ -1,0 +1,8 @@
+SECRET_KEY='encurtador'
+ALLOWED_HOSTS='localhost,127.0.0.1'
+
+POSTGRES_DB=encurtador
+POSTGRES_USER=encurtador
+POSTGRES_PASSWORD=encurtador
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
